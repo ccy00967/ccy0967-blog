@@ -1,37 +1,37 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "morethanmin",
-    image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "frontend developer",
-    bio: "I develop everything using node.",
-    email: "morethanmin.dev@gmail.com",
-    linkedin: "morethanmin",
-    github: "morethanmin",
+    name: "Chae, Chul Young",
+    image: "https://github.com/ccy00967.png",
+    role: "student",
+    bio: "I believe in Think & Grow Rich",
+    email: "ccy09671324@gmail.com",
+    linkedin: "",
+    github: "ccy00967",
     instagram: "",
   },
   projects: [
     {
-      name: `morethan-log`,
-      href: "https://github.com/morethanmin/morethan-log",
+      name: `ccy-blog`,
+      href: "https://github.com/ccy00967/ccy0967-blog",
     },
   ],
   // blog setting (required)
   blog: {
-    title: "morethan-log",
-    description: "welcome to morethan-log!",
-    scheme: "dark", // 'light' | 'dark' | 'system'
+    title: "ccy00967's blog",
+    description: "Chul Young's blog",
+    scheme: "light", // 'light' | 'dark' | 'system'
   },
-
+  
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
-  since: 2022, // If leave this empty, current year will be used.
-  lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
+  link: "https://ccy00967.github.io",
+  since: 2025, // If leave this empty, current year will be used.
+  lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
-
+  
   // notion configuration (required)
   notionConfig: {
-    pageId: process.env.NOTION_PAGE_ID,
+    pageId: "22ddd0cf30bc80be8a22dac6b5af81a2",
   },
 
   // plugin configuration (optional)
