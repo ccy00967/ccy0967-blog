@@ -24,7 +24,7 @@ const CONFIG = {
   },
   
   // CONFIG configration (required)
-  link: "https://ccy00967.github.io",
+  link: "https://ccy0967-blog.vercel.app/",
   since: 2025, // If leave this empty, current year will be used.
   lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
