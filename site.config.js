@@ -56,7 +56,7 @@ const CONFIG = {
   utterances: {
     enable: true,
     config: {
-      repo: ccy00967/ccy0967-blog || "",
+      repo: "ccy00967/ccy0967-blog" || "",
       "issue-term": "og:title",
       // label: "💬 Utterances",
     },
