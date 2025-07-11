@@ -56,9 +56,9 @@ const CONFIG = {
   utterances: {
     enable: true,
     config: {
-      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
+      repo: ccy00967/ccy0967-blog || "",
       "issue-term": "og:title",
-      label: "💬 Utterances",
+      // label: "💬 Utterances",
     },
   },
   cusdis: {
