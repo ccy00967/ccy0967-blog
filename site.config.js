@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Chae, Chul Young",
-    image: "https://github.com/ccy00967.png",
+    image: "/avatar.svg",
     role: "student",
     bio: "I believe in Think & Grow Rich",
     email: "ccy09671324@gmail.com",
