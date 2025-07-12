@@ -151,7 +151,6 @@ const MainContent = styled.div`
   > article {
     margin: 0 auto;
     max-width: 42rem;
-    padding: 0 1.5rem;
   }
 `
 
