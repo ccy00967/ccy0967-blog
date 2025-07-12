@@ -54,7 +54,7 @@ const PostDetail: React.FC<Props> = () => {
           })
         },
         {
-          rootMargin: '-20% 0px -35% 0px'
+          rootMargin: '-80px 0px -50% 0px' // 앱바 높이와 일치하도록 조정
         }
       )
 
@@ -131,6 +131,8 @@ const PostDetail: React.FC<Props> = () => {
 export default PostDetail
 
 const StyledWrapper = styled.div`
+  display: flex;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -138,6 +140,7 @@ const StyledWrapper = styled.div`
 `
 
 const MainContent = styled.div`
+  flex: 1;
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
@@ -156,9 +159,8 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 5rem;
-  right: 2rem;
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 7rem);
