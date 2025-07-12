@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Chae, Chul Young",
-    image: "/wallpaperbetter.com_3024x1964.jpg",
+    image: "/avatar.svg",
     role: "student",
     bio: "I believe in Think & Grow Rich",
     email: "ccy09671324@gmail.com",
