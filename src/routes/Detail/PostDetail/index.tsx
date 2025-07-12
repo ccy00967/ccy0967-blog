@@ -54,7 +54,7 @@ const PostDetail: React.FC<Props> = () => {
           })
         },
         {
-          rootMargin: '-80px 0px -50% 0px' // 앱바 높이와 일치하도록 조정
+          rootMargin: '-80px 0px -80% 0px' // 앱바 바로 아래에 위치했을 때 하이라이팅
         }
       )
 
@@ -131,16 +131,14 @@ const PostDetail: React.FC<Props> = () => {
 export default PostDetail
 
 const StyledWrapper = styled.div`
-  display: flex;
-  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative;
+  min-height: 100vh; // 최소 높이 설정으로 스크롤 정상화
 `
 
 const MainContent = styled.div`
-  flex: 1;
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
@@ -159,8 +157,9 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: sticky;
+  position: absolute;
   top: 5rem;
+  right: 0;
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 7rem);
