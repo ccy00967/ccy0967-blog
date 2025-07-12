@@ -159,7 +159,7 @@ const MainContent = styled.div`
 const TOCSidebar = styled.nav`
   position: absolute;
   top: 5rem;
-  right: 0;
+  left: calc(50% + 28rem + 2rem); // 본문 박스 오른쪽에 정확히 붙임
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 7rem);
