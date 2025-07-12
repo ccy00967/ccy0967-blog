@@ -69,7 +69,7 @@ const PostDetail: React.FC<Props> = () => {
   const scrollToHeading = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      const offsetTop = element.offsetTop - 100 // 헤더 높이만큼 조정
+      const offsetTop = element.offsetTop - 120 // 앱바 높이 + 여유 공간
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
@@ -139,7 +139,7 @@ const MainContent = styled.div`
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   background-color: ${({ theme }) =>
     theme.scheme === "light" ? "white" : theme.colors.gray4};
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -155,7 +155,7 @@ const MainContent = styled.div`
 const TOCSidebar = styled.nav`
   position: absolute;
   top: 5rem;
-  right: -320px; // 메인 콘텐츠 밖으로 배치
+  right: -300px; // 화면 안으로 조정
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 7rem);
