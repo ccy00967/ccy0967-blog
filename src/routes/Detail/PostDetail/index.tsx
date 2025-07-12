@@ -103,7 +103,6 @@ const PostDetail: React.FC<Props> = () => {
       
       {tocItems.length > 0 && (
         <TOCSidebar>
-          <TOCTitle>목차</TOCTitle>
           <TOCList>
             {tocItems.map((item) => (
               <TOCItem
@@ -130,10 +129,13 @@ const StyledWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
 `
 
 const MainContent = styled.div`
   flex: 1;
+  max-width: 56rem;
+  margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-radius: 1.5rem;
@@ -150,30 +152,17 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 2rem;
+  right: 2rem;
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
-  padding: 1rem;
-  background-color: ${({ theme }) =>
-    theme.scheme === 'light' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.1)'};
-  border-radius: 0.5rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid ${({ theme }) =>
-    theme.scheme === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)'};
   
   @media (max-width: 1024px) {
     display: none;
   }
-`
-
-const TOCTitle = styled.h3`
-  margin: 0 0 1rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.gray12};
 `
 
 const TOCList = styled.ul`
@@ -194,12 +183,9 @@ const TOCItem = styled.li<{ level: number; isActive: boolean }>`
   color: ${({ theme, isActive }) =>
     isActive ? theme.colors.blue11 : theme.colors.gray11};
   font-weight: ${({ isActive }) => (isActive ? '600' : '400')};
-  background-color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.blue3 : 'transparent'};
 
   &:hover {
     color: ${({ theme }) => theme.colors.blue11};
-    background-color: ${({ theme }) => theme.colors.blue2};
   }
 
   &::before {
