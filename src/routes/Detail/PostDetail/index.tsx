@@ -135,7 +135,6 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative;
-  min-height: 100vh; // 최소 높이 설정으로 스크롤 정상화
 `
 
 const MainContent = styled.div`
@@ -157,9 +156,9 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 5rem;
-  left: calc(50% + 28rem + 2rem); // 본문 박스 오른쪽에 정확히 붙임
+  right: 2rem;
   width: 280px;
   height: fit-content;
   max-height: calc(100vh - 7rem);
