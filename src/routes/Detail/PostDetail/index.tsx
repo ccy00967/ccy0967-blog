@@ -23,7 +23,7 @@ const PostDetail: React.FC<Props> = () => {
   useEffect(() => {
     // Notion 렌더링 후 헤딩 요소들을 찾아서 TOC 아이템 생성
     const timer = setTimeout(() => {
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+      const headings = document.querySelectorAll('h2, h3, h4, h5, h6') // h1 제외
       const items: TOCItem[] = []
 
       headings.forEach((heading) => {
@@ -153,11 +153,11 @@ const MainContent = styled.div`
 
 const TOCSidebar = styled.nav`
   position: fixed;
-  top: 2rem;
+  top: 5rem; // 앱바 높이만큼 조정
   right: 2rem;
   width: 280px;
   height: fit-content;
-  max-height: calc(100vh - 4rem);
+  max-height: calc(100vh - 7rem); // 앱바 높이만큼 조정
   overflow-y: auto;
   
   @media (max-width: 1024px) {
