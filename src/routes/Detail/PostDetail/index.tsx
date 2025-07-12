@@ -163,6 +163,10 @@ const TOCSidebar = styled.nav`
   backdrop-filter: blur(10px);
   border: 1px solid ${({ theme }) =>
     theme.scheme === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)'};
+  
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 const TOCTitle = styled.h3`
