@@ -69,7 +69,11 @@ const PostDetail: React.FC<Props> = () => {
   const scrollToHeading = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const offsetTop = element.offsetTop - 100 // 헤더 높이만큼 조정
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -124,8 +128,6 @@ const PostDetail: React.FC<Props> = () => {
 export default PostDetail
 
 const StyledWrapper = styled.div`
-  display: flex;
-  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -133,7 +135,6 @@ const StyledWrapper = styled.div`
 `
 
 const MainContent = styled.div`
-  flex: 1;
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
@@ -152,12 +153,12 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: fixed;
-  top: 5rem; // 앱바 높이만큼 조정
-  right: 2rem;
+  position: absolute;
+  top: 5rem;
+  right: -320px; // 메인 콘텐츠 밖으로 배치
   width: 280px;
   height: fit-content;
-  max-height: calc(100vh - 7rem); // 앱바 높이만큼 조정
+  max-height: calc(100vh - 7rem);
   overflow-y: auto;
   
   @media (max-width: 1024px) {
