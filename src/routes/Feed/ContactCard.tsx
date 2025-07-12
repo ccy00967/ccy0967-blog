@@ -72,7 +72,7 @@ const StyledWrapper = styled.div`
   display: flex;
   padding: 0.25rem;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: ${({ theme }) =>
     theme.scheme === "light" ? "white" : theme.colors.gray4};
   a {
@@ -80,7 +80,7 @@ const StyledWrapper = styled.div`
     padding: 0.75rem;
     gap: 0.75rem;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: ${({ theme }) => theme.colors.gray11};
     cursor: pointer;
 
