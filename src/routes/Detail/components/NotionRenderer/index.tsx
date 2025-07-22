@@ -16,6 +16,14 @@ import "katex/dist/katex.min.css"
 import { FC } from "react"
 import styled from "@emotion/styled"
 
+// Divider 컴포넌트 추가
+const Divider = styled.hr`
+  border: none;
+  border-top: 1.5px solid ${({ theme }) => theme.colors.gray6 || '#e0e0e0'};
+  margin: 2.5rem 0;
+  width: 100%;
+`;
+
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),
   { ssr: false }
@@ -69,6 +77,8 @@ const NotionRenderer: FC<Props> = ({ recordMap }) => {
           Pdf,
           nextImage: Image,
           nextLink: Link,
+          // Divider 블록에 커스텀 Divider 컴포넌트 지정
+          Divider,
         }}
         mapPageUrl={mapPageUrl}
       />
