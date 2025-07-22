@@ -93,7 +93,7 @@ const StyledWrapper = styled.div`
   .notion-hr {
     border: none;
     border-top: 1.5px solid #e0e0e0;
-    margin: 2.5rem 0;
+    margin: 1rem 0;
     width: 100%;
   }
 `;
