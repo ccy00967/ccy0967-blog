@@ -16,20 +16,6 @@ import "katex/dist/katex.min.css"
 import { FC } from "react"
 import styled from "@emotion/styled"
 
-// Divider 컴포넌트: props를 받아서 스타일 적용
-const Divider = (props: React.HTMLAttributes<HTMLHRElement>) => (
-  <hr
-    {...props}
-    style={{
-      border: "none",
-      borderTop: "1.5px solid #e0e0e0",
-      margin: "2.5rem 0",
-      width: "100%",
-      ...props.style,
-    }}
-  />
-);
-
 const _NotionRenderer = dynamic(
   () => import("react-notion-x").then((m) => m.NotionRenderer),
   { ssr: false }
@@ -83,8 +69,6 @@ const NotionRenderer: FC<Props> = ({ recordMap }) => {
           Pdf,
           nextImage: Image,
           nextLink: Link,
-          // Divider 블록에 커스텀 Divider 컴포넌트 지정
-          Divider,
         }}
         mapPageUrl={mapPageUrl}
       />
@@ -105,4 +89,11 @@ const StyledWrapper = styled.div`
   .notion-list {
     width: 100%;
   }
-`
+  /* 노션 Divider(---) 스타일 */
+  .notion-hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 2.5rem 0;
+    width: 100%;
+  }
+`;
