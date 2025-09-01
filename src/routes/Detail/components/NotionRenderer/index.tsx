@@ -128,4 +128,86 @@ const StyledWrapper = styled.div`
   .notion-text-block:last-child {
     margin-bottom: 0 !important;
   }
+  
+  /* 코드 블록 전체 내용 표시 */
+  .notion-code-block {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* 코드 블록 내부 스크롤 제거 */
+  .notion-code-block > div {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* 코드 블록 pre 태그 스크롤 제거 */
+  .notion-code-block pre {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* 코드 블록 내부 코드 텍스트 */
+  .notion-code-block code {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* 본문 끝 여백 완전 제거 - 스크롤을 투명 카드 하단에서 끝나게 */
+  .notion-page-content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* 노션 페이지의 모든 하단 여백 제거 */
+  .notion-page {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* 노션 페이지 내부의 마지막 요소 여백 제거 */
+  .notion-page > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* 노션 콘텐츠 영역 하단 여백 제거 */
+  .notion-page-content > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* 노션 블록들의 하단 여백 최소화 */
+  .notion-block,
+  .notion-text-block,
+  .notion-code-block,
+  .notion-image-block,
+  .notion-divider-block,
+  .notion-quote-block,
+  .notion-callout-block,
+  .notion-toggle-block,
+  .notion-bulleted-list-block,
+  .notion-numbered-list-block,
+  .notion-to-do-block,
+  .notion-table-block,
+  .notion-column-block,
+  .notion-column-list-block {
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* 마지막 블록의 하단 여백 완전 제거 */
+  .notion-page-content > *:last-child,
+  .notion-page-content > *:last-child > *:last-child,
+  .notion-page-content > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
 `;

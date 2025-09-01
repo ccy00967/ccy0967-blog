@@ -141,7 +141,7 @@ const MainContent = styled.div`
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
-  padding-bottom: 0;
+  padding-bottom: 0.625rem;
   border-radius: 0.75rem;
   background-color: ${({ theme }) => theme.colors.gray2};
   box-shadow: none;
