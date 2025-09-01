@@ -212,4 +212,23 @@ const StyledWrapper = styled.div`
   .notion-page-content > *:last-child > *:last-child {
     margin-bottom: 0 !important;
   }
+  
+  /* 본문 끝 여백 완전 제거 - 모든 하위 요소 포함 */
+  .notion-page-content *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* 노션 페이지 내부의 모든 마지막 요소 여백 제거 */
+  .notion-page *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* 본문 컨테이너 자체의 여백 제거 */
+  .notion-page-content,
+  .notion-page {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
 `;

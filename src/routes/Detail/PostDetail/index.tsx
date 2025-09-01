@@ -135,7 +135,6 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative;
-  min-height: 100vh;
 `
 
 const MainContent = styled.div`
