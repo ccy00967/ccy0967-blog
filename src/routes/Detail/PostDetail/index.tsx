@@ -96,7 +96,7 @@ const PostDetail: React.FC<Props> = () => {
             </div>
           )}
           {data.type[0] === "Post" && <PostHeader data={data} />}
-          <div>
+          <div style={{ marginBottom: 0 }}>
             <NotionRenderer recordMap={data.recordMap} />
           </div>
           {data.type[0] === "Post" && (
@@ -141,7 +141,7 @@ const MainContent = styled.div`
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
   border-radius: 0.75rem;
   background-color: ${({ theme }) => theme.colors.gray2};
   box-shadow: none;
