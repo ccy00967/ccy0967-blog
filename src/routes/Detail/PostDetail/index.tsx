@@ -153,7 +153,7 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 5rem;
   right: 2rem;
   width: 280px;
