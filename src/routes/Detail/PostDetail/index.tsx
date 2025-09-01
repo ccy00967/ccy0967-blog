@@ -85,28 +85,30 @@ const PostDetail: React.FC<Props> = () => {
   const category = (data.category && data.category?.[0]) || undefined
 
   return (
-    <StyledWrapper>
-      <MainContent>
-        <article>
-          {category && (
-            <div css={{ marginBottom: "0.5rem" }}>
-              <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
-                {category}
-              </Category>
+    <>
+      <StyledWrapper>
+        <MainContent>
+          <article>
+            {category && (
+              <div css={{ marginBottom: "0.5rem" }}>
+                <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
+                  {category}
+                </Category>
+              </div>
+            )}
+            {data.type[0] === "Post" && <PostHeader data={data} />}
+            <div style={{ marginBottom: 0 }}>
+              <NotionRenderer recordMap={data.recordMap} />
             </div>
-          )}
-          {data.type[0] === "Post" && <PostHeader data={data} />}
-          <div style={{ marginBottom: 0 }}>
-            <NotionRenderer recordMap={data.recordMap} />
-          </div>
-          {data.type[0] === "Post" && (
-            <>
-              <Footer />
-              <CommentBox data={data} />
-            </>
-          )}
-        </article>
-      </MainContent>
+            {data.type[0] === "Post" && (
+              <>
+                <Footer />
+                <CommentBox data={data} />
+              </>
+            )}
+          </article>
+        </MainContent>
+      </StyledWrapper>
       
       {tocItems.length > 0 && (
         <TOCSidebar>
@@ -124,7 +126,7 @@ const PostDetail: React.FC<Props> = () => {
           </TOCList>
         </TOCSidebar>
       )}
-    </StyledWrapper>
+    </>
   )
 }
 
@@ -153,7 +155,7 @@ const MainContent = styled.div`
 `
 
 const TOCSidebar = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 5rem;
   right: 2rem;
   width: 280px;
