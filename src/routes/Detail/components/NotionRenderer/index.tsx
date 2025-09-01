@@ -96,4 +96,36 @@ const StyledWrapper = styled.div`
     margin: 1rem 0;
     width: 100%;
   }
+  
+  /* 본문 끝 여백 제거 */
+  .notion-page-content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* 노션 페이지 하단 여백 제거 */
+  .notion-page-content > div:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* 노션 블록 하단 여백 최소화 */
+  .notion-block {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* 노션 블록 마지막 요소 여백 제거 */
+  .notion-block:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* 노션 텍스트 블록 여백 조정 */
+  .notion-text-block {
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* 노션 텍스트 블록 마지막 요소 여백 제거 */
+  .notion-text-block:last-child {
+    margin-bottom: 0 !important;
+  }
 `;
