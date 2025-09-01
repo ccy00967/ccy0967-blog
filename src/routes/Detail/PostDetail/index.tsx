@@ -143,10 +143,8 @@ const MainContent = styled.div`
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-radius: 0.75rem;
-  background-color: ${({ theme }) =>
-    theme.scheme === "light" ? "white" : theme.colors.gray4};
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: ${({ theme }) => theme.colors.gray2};
+  box-shadow: none;
   
   > article {
     margin: 0 auto;
