@@ -64,8 +64,6 @@ const RootLayout = ({ children }: Props) => {
 
 export default RootLayout
 
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+const StyledMain = styled.main`
+  padding: 5rem 1.5rem 0;
 `
