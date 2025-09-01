@@ -178,4 +178,38 @@ const StyledWrapper = styled.div`
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
+  
+  /* 본문 끝 여백 완전 제거 - 카드 끝에서 스크롤 끝나게 */
+  .notion-page-content {
+    margin-bottom: 0 !important;
+  }
+  
+  /* 노션 페이지 하단 여백 제거 */
+  .notion-page {
+    margin-bottom: 0 !important;
+  }
+  
+  /* 모든 노션 블록의 하단 여백 최소화 */
+  .notion-block,
+  .notion-text-block,
+  .notion-code-block,
+  .notion-image-block,
+  .notion-divider-block,
+  .notion-quote-block,
+  .notion-callout-block,
+  .notion-toggle-block,
+  .notion-bulleted-list-block,
+  .notion-numbered-list-block,
+  .notion-to-do-block,
+  .notion-table-block,
+  .notion-column-block,
+  .notion-column-list-block {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* 마지막 블록의 하단 여백 완전 제거 */
+  .notion-page-content > *:last-child,
+  .notion-page-content > *:last-child > *:last-child {
+    margin-bottom: 0 !important;
+  }
 `;

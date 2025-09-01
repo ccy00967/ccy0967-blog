@@ -100,10 +100,10 @@ const PostDetail: React.FC<Props> = () => {
             <NotionRenderer recordMap={data.recordMap} />
           </div>
           {data.type[0] === "Post" && (
-            <div style={{ marginBottom: 0, paddingBottom: 0 }}>
+            <>
               <Footer />
               <CommentBox data={data} />
-            </div>
+            </>
           )}
         </article>
       </MainContent>
@@ -142,7 +142,7 @@ const MainContent = styled.div`
   max-width: 56rem;
   margin: 0 auto;
   padding-top: 3rem;
-  padding-bottom: 0.625rem;
+  padding-bottom: 0;
   border-radius: 0.75rem;
   background-color: ${({ theme }) => theme.colors.gray2};
   box-shadow: none;
