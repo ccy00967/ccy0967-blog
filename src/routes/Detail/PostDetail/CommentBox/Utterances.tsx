@@ -46,6 +46,8 @@ const Utterances: React.FC<Props> = ({ issueTerm }) => {
 export default Utterances
 
 const StyledWrapper = styled.div`
+  min-height: 200px;
+
   @media (min-width: 768px) {
     margin-left: -4rem;
   }
