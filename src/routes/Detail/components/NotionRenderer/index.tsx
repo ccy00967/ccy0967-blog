@@ -161,52 +161,20 @@ const StyledWrapper = styled.div`
     word-wrap: break-word !important;
   }
   
-  /* 본문 끝 여백 완전 제거 - 스크롤을 투명 카드 하단에서 끝나게 */
+  /* 본문 끝 여백만 제거 - 스크롤을 투명 카드 하단에서 끝나게 */
   .notion-page-content {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
   }
   
-  /* 노션 페이지의 모든 하단 여백 제거 */
+  /* 노션 페이지 하단 여백 제거 */
   .notion-page {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
   }
   
-  /* 노션 페이지 내부의 마지막 요소 여백 제거 */
-  .notion-page > *:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  /* 노션 콘텐츠 영역 하단 여백 제거 */
+  /* 노션 콘텐츠의 마지막 요소 여백 제거 */
   .notion-page-content > *:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  /* 노션 블록들의 하단 여백 최소화 */
-  .notion-block,
-  .notion-text-block,
-  .notion-code-block,
-  .notion-image-block,
-  .notion-divider-block,
-  .notion-quote-block,
-  .notion-callout-block,
-  .notion-toggle-block,
-  .notion-bulleted-list-block,
-  .notion-numbered-list-block,
-  .notion-to-do-block,
-  .notion-table-block,
-  .notion-column-block,
-  .notion-column-list-block {
-    margin-bottom: 0.25rem !important;
-  }
-  
-  /* 마지막 블록의 하단 여백 완전 제거 */
-  .notion-page-content > *:last-child,
-  .notion-page-content > *:last-child > *:last-child,
-  .notion-page-content > *:last-child > *:last-child > *:last-child {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
