@@ -55,7 +55,7 @@ const RootLayout = ({ children }: Props) => {
     <ThemeProvider scheme={scheme}>
       <Scripts />
       <StyledWrapper>
-        <Header />
+        <Header fullWidth={false} />
         <StyledContent>{children}</StyledContent>
       </StyledWrapper>
     </ThemeProvider>
