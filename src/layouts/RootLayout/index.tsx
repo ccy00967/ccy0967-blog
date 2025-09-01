@@ -54,16 +54,25 @@ const RootLayout = ({ children }: Props) => {
   return (
     <ThemeProvider scheme={scheme}>
       <Scripts />
-      {/* // TODO: replace react query */}
-      {/* {metaConfig.type !== "Paper" && <Header />} */}
-      <Header fullWidth={false} />
-      <StyledMain>{children}</StyledMain>
+      <StyledWrapper>
+        <Header />
+        <StyledContent>{children}</StyledContent>
+      </StyledWrapper>
     </ThemeProvider>
   )
 }
 
 export default RootLayout
 
-const StyledMain = styled.main`
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+const StyledContent = styled.main`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 5rem 1.5rem 0;
 `
