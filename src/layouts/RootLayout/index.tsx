@@ -68,11 +68,15 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
+
+  &:has(.detail-page-wrapper) {
+    min-height: auto;
+  }
 `
 
 const StyledContent = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 5rem 1.5rem 0;
 `
