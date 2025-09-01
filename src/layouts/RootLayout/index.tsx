@@ -70,6 +70,7 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
   min-height: 100vh;
 
+  /* When this component contains a detail page, stop forcing full height */
   &:has(.detail-page-wrapper) {
     min-height: auto;
   }
@@ -79,4 +80,15 @@ const StyledContent = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  /* Center content and set max width */
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  /* When this component contains a detail page, stop it from growing */
+  &:has(.detail-page-wrapper) {
+    flex-grow: 0;
+  }
 `
